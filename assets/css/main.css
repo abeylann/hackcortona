@@ -1993,7 +1993,8 @@ input[type="button"].style3:hover, input[type="submit"].style3:hover, input[type
         padding: 0.5em 1.25em 0.5em 1.25em;
     }
     #footer .copyright {
-        font-size: 1em;
+        font-size: 10pt;
+        font-weight: 300;
         margin: 0 0 4em 0;
     }
     /* Poptrox */
