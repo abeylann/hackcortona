@@ -178,7 +178,7 @@ body {
         text-align: center;
     }
     .left {
-        font-size: 0.8em;
+        font-size: 0.9em;
     }
     .container.\31 25\25 {
         width: 100%;
@@ -1856,9 +1856,9 @@ input[type="button"].style3:hover, input[type="submit"].style3:hover, input[type
         text-shadow: none !important;
     }
     body, input, textarea, select {
-        line-height: 1.5em;
+        line-height: 1.8em;
         font-size: 12pt;
-        letter-spacing: 0;
+        letter-spacing: 0.8px;
     }
     h2, h3, h4, h5, h6 {
         font-size: 1em;
@@ -1985,8 +1985,8 @@ input[type="button"].style3:hover, input[type="submit"].style3:hover, input[type
         margin: 0 0 1em 0;
     }
     #banner header h2 {
-        font-size: 1.5em;
-        letter-spacing: 6px;
+        font-size: 1.3em;
+        letter-spacing: 1.2px;
     }
     /* Footer */
     #footer .icons {
