@@ -12,7 +12,7 @@
 			fullScreenHeader: true,
 
 		// Parallax background effect?
-			parallax: true,
+			parallax: false,
 
 		// Parallax factor (lower = more intense, higher = less intense).
 			parallaxFactor: 10
