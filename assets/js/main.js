@@ -34,7 +34,6 @@
 		if (skel.vars.touch) {
 
 			settings.parallax = false;
-			$body.addClass('is-scroll');
 
 		}
 
