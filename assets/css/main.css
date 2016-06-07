@@ -152,6 +152,12 @@ body {
 }
 @media screen and (max-width: 736px) {
     /* Table */
+
+    .photolink{
+        text-transform: none;
+        border-bottom: none;
+
+    }
     .tableFaq {
         display: inline;
         width: 100%;
