@@ -1905,6 +1905,7 @@ input[type="button"].style3:hover, input[type="submit"].style3:hover, input[type
     input[type="button"], input[type="submit"], input[type="reset"], button, .button {
         padding: 0.75em 0 0.75em 0;
         width: 100%;
+        margin-top: 20px;
         max-width: 200px;
     }
     /* Box */
