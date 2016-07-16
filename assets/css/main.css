@@ -209,8 +209,8 @@ body {
 
 .row {
     border-bottom: solid 1px transparent;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
+    /*-moz-box-sizing: border-box;*/
+    /*-webkit-box-sizing: border-box;*/
     box-sizing: border-box;
 }
 .row > * {
@@ -1078,6 +1078,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
     text-transform: uppercase;
     line-height: 1.75em;
+    text-align: center;
 }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     color: inherit;
@@ -1308,9 +1309,9 @@ form ul.actions {
 /* Table */
 
 .table-wrapper {
-    width: 100%;
+    /*width: 100%;*/
     overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    /*-webkit-overflow-scrolling: touch;*/
 }
 table {
     width: 100%;
@@ -1387,6 +1388,19 @@ input[type="button"].style3:hover, input[type="submit"].style3:hover, input[type
     position: relative;
     margin-top: 9em;
     margin-bottom: 0;
+}
+.box.style4 {
+  background: #fff;
+  border: solid 1px _palette(border);
+  padding: 2.5em;
+  position: relative;
+  margin-bottom: 0;
+
+  &.alt {
+    background: none;
+    border: none;
+    padding: 0;
+  }
 }
 .box:after {
     content: '';
@@ -1867,7 +1881,7 @@ input[type="button"].style3:hover, input[type="submit"].style3:hover, input[type
         letter-spacing: 0.8px;
     }
     h2, h3, h4, h5, h6 {
-        font-size: 1em;
+        font-size: 0.5em;
     }
     h2 {
         font-size: 1.25em;
