@@ -1538,16 +1538,9 @@ input[type="button"].style3:hover, input[type="submit"].style3:hover, input[type
     text-shadow: 0 0 0.5px rgba(255, 255, 255, 0.25);
     text-align: center;
     margin: 0;
-    padding: 4em 0 7em 0;
+    padding: 14em 0 14em 0;
     cursor: default;
-    height: 39vh;
-}
-@media screen and (max-width: 730px) {
-    #header {
-    padding: 4em 0 14em 0;
-    height: 57.7vh;
-
-    }
+    height: 100vh;
 }
 
 
@@ -2039,4 +2032,68 @@ input[type="button"].style3:hover, input[type="submit"].style3:hover, input[type
     .poptrox-popup .closer {
         opacity: 0.5;
     }
+}
+.bax {
+    position: relative;
+    margin-top: 9em;
+    margin-bottom: 0;
+}
+.bax.style4 {
+  background: #fff;
+  border: solid 1px _palette(border);
+  padding: 2.5em;
+  position: relative;
+  margin-bottom: 0;
+
+  &.alt {
+    background: none;
+    border: none;
+    padding: 0;
+  }
+}
+
+.bax:last-child {
+    margin-bottom: 0;
+}
+.bax.style1 {
+    background: #fff;
+    padding: 3em;
+}
+.bax.style1 .image {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: #152E33;
+    overflow: hidden;
+}
+.bax.style1 .image img {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: auto;
+}
+.bax.style1 .inner >:last-child {
+    margin: 0;
+}
+.bax.style1.right .image {
+    left: 0;
+}
+.bax.style1.right .image img {
+    right: 0;
+}
+.bax.style1.right .inner {
+    margin-left: 50%;
+    padding-left: 3em;
+}
+.bax.style1.left .image {
+    right: 0;
+}
+.box.style1.left .image img {
+    left: 0;
+}
+.box.style1.left . {
+    margin-right: 50%;
+    padding-right: 3em;
 }
