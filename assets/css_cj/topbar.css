@@ -1,0 +1,302 @@
+#pe-topbar, #pe-topbar-status {
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 9999;
+  background-color: rgba(48,48,48,0.5);
+  height: 3em !important;
+  line-height: 3em;
+  width: 100%;
+  top: 0;
+  left: 0;
+  text-align: center;
+  position: fixed;
+  border-bottom: 1px solid rgba(0,0,0,0);
+}
+#pe-topbar img {
+  height: 30px;
+  width: 30px;
+  vertical-align: middle;
+}
+
+#pe-topbar-status {
+  top: 3em !important;
+  height: 3.5em;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  z-index: 9997;
+}
+
+#pe-topbar-status .header-a {
+  font-size: 1.2em;
+  letter-spacing: 0.5px;
+}
+
+div.topbar {
+  opacity: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+#pe-topbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  align-self: center;
+}
+
+#pe-topbar li {
+  display: inline;
+}
+
+#pe-topbar a {
+  font-size: 1em !important;
+}
+
+#pe-topbar-status ul {
+  list-style-type: none;
+  width: 80%;
+  margin: 0 auto;
+  padding: 0;
+  padding-top: 0.3em;
+  align-self: center;
+  display: table;
+  overflow: hidden;
+}
+
+#pe-topbar-status li {
+  float: left;
+}
+
+#pe-topbar a.navigation, #pe-topbar a.navigation_first, #topbar a.navigation_first, #responsive-menu a.navigation, #responsive-menu a.navigation_first {
+  align-content: center;
+  font-family: SFDisplay;
+  font-weight: 200;
+  letter-spacing: 1px;
+  width: 5em;
+  text-decoration: none;
+  color: white;
+  padding: 0 0.5em 0 1em;
+  border-bottom: 0;
+  border-left: dotted 1px rgba(255, 255, 255, 0.25);
+}
+
+  #pe-topbar a.navigation_first img {
+    transition: opacity .3s;
+  }
+
+  #pe-topbar a.navigation:hover, #pe-topbar a.navigation_first:hover {
+    border-bottom-color: transparent;
+    color: #22fff2 !important;
+    text-decoration: none;
+  }
+
+  #pe-topbar a.navigation_first:hover img {
+    opacity: 0.8;
+  }
+
+  #pe-topbar a.navigation_first, #topbar a.navigation_first, #responsive-menu a.linknostyle_first, #responsive-menu a.linknostyle, #responsive-menu a.navigation, #responsive-menu a.navigation_first {
+    border-left: 0;
+  }
+
+  #pe-topbar a.linknostyle, #pe-topbar a.linknostyle_first, #responsive-menu a.linknostyle, #responsive-menu a.linknostyle_first {
+    border-bottom: 0;
+    align-content: center;
+    font-family: SFDisplay;
+    font-weight: 200;
+    letter-spacing: 1px;
+    color: #22fff2;
+    padding: 0 0.5em 0 1em;
+  }
+
+    #pe-topbar a.linknostyle, #topbar a.linknostyle, #responsive-menu a.linknostyle {
+      padding: 0 0.5em 0 1em;
+      border-bottom: 0;
+      border-left: dotted 1px rgba(255, 255, 255, 0.25);
+    }
+
+
+  div.responsive-menu {
+    display: none;
+  }
+  @media screen and (max-width: 640px) {
+      #logo {
+        width: 16%;
+      }
+      #mainsection-index {
+        top: auto;
+        bottom: auto;
+        margin: auto 0;
+      }
+      div.topbar {
+        opacity: 1;
+        pointer-events: auto;
+        z-index: 9999;
+        background-color: rgba(48,48,48,0.5);
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+        height: 3em;
+        line-height: 3em;
+        width: 100%;
+        top: 0;
+        left: 0;
+        text-align: center;
+        position: fixed;
+        display: table-row;
+      }
+      div.topbar img {
+        height: 30px;
+        width: 30px;
+        vertical-align: middle;
+      }
+      #btnsignup {
+        margin-top: 2em;
+      }
+      #calendar {
+        width: 100%;
+      }
+      #nav-toggle {
+        position: absolute;
+        right: 20px;
+      }
+      #nav-toggle {
+        cursor: pointer;
+        border-bottom: none;
+        padding: 1.7em 10px 0px 0px;
+        height: 3em;
+        width: 20px;
+      }
+      #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+        cursor: pointer;
+        border-radius: 1px;
+        height: 1px;
+        width: 18px;
+        background: white;
+        position: absolute;
+        display: block;
+        content: '';
+      }
+      #nav-toggle span:after {
+        background: transparent;
+      }
+      #nav-toggle span:before {
+        top: -7px;
+      }
+      #nav-toggle span:after {
+        bottom: 0px;
+      }
+      #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+        transition: all 300ms ease-in-out;
+      }
+      #nav-toggle.active span {
+        background-color: white;
+      }
+      #nav-toggle.active span:before, #nav-toggle.active span:after {
+        top: 0;
+      }
+      #nav-toggle.active span:before {
+        transform: rotate(-90deg);
+        -webkit-transform: rotate(-90deg);
+      }
+      #nav-toggle.active span {
+        transform: rotate(45deg) translateY(-3px);
+        -webkit-transform: rotate(45deg) translateY(-3px);
+      }
+      #nav-list-r {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding-top: 5em;
+        text-align: center;
+        font-size: 1.2em;
+        line-height: 1.8em;
+        list-style-type: none !important;
+        padding-left: 0em !important;
+      }
+      div.responsive-menu {
+        opacity: 0;
+        position: fixed;
+        display: block;
+        pointer-events: none;
+        z-index: 9998;
+        top: 0;
+        margin-left: -2em;
+        width: 100%;
+        height: 100%;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+      div.logo-title, #pe-topbar {
+        display: none;
+      }
+      li {
+        display: list-item;
+        margin-bottom: 0.5em;
+        padding: 0;
+      }
+      ul li {
+        padding-left: 0em;
+      }
+      p.twitter {
+        width: 90%;
+      }
+      a.navigation, a.navigation_first {
+        border-left: 0;
+        padding: 0;
+      }
+      a.linknostyle {
+        padding: 0;
+        border-left: none;
+      }
+      a.linknostyle_first {
+        padding: 0;
+        border-left: none;
+      }
+      div.maintext {
+        display: inline-block;
+        width: 100%;
+        padding: 0 1.3em 0 1.3em;
+        vertical-align: top;
+      }
+      div.mainsection {
+        top: 0;
+      }
+      div.mainsection-calendar {
+        top: 0;
+      }
+      button {
+        margin-bottom: 2em;
+      }
+
+      section.person {
+        height: 13em;
+        padding: 1em;
+      }
+
+      #ef {
+        height: 17em;
+      }
+
+      #informatics {
+        height: 20em;
+      }
+
+      #team-description, #partner-description {
+        font-size: 0.9em;
+      }
+      #team-title, #partner-title {
+        font-size: 1.5em;
+      }
+      #index-upcoming-event-title {
+        font-size: 1em;
+      }
+
+      /*#footer {
+        bottom: 0em;
+        position: fixed;
+        z-index: 9999;
+        background-color: rgba(0, 0, 0, 1);
+        padding: 0.8em 0;
+      }*/
+
+      .kcltech-contact {
+        width: 95%;
+      }
+}

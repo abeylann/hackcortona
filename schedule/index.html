@@ -1,0 +1,151 @@
+<!doctype html>
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Schedule - HackCortona</title>
+  <meta name="title" content="HackCortona Schedule">
+  <meta name="description" content="This page will show the schedule of HackCortona.">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="../assets/css_cj/reset.css">
+  <link rel="stylesheet" href="../assets/css_cj/live.css">
+  <link rel="stylesheet" href="../assets/css_cj/topbar.css">
+
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/list.js/1.1.1/list.min.js"></script>
+  <script src="../assets/js_cj/moment.js"></script>
+  <script src="../assets/js_cj/moment-timezone.js"></script>
+
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+  <script src="https://cdn.apple-cloudkit.com/ck/2/cloudkit.js"></script>
+
+</head>
+
+<body>
+
+  <div id="pe-topbar" class="topbar">
+		<ul>
+			<li>
+				<a href="http://hackcortona.com" class="navigation_first">
+					HackCortona
+				</a>
+			</li>
+      <li><a class="navigation" href="http://hackcortona.com/welcome">Welcome Pack</a></li>
+			<li><a class="linknostyle">Schedule</a></li>
+			<!-- <li><a class="navigation" href="http://hackcortona.com/live">Live Feed</a></li> -->
+			<li><a class="navigation" href="http://hackcortona.com/travel">Travel Information</a></li>
+			<li><a class="navigation" href="http://hackcortona.com/hardware">Hardware Lab</a></li>
+		</ul>
+	</div>
+
+  <div id="topbar" class="topbar">
+    <a href="http://hacklondon.org" class="navigation_first">
+      HackLondon 2016
+    </a>
+		<a id="nav-toggle" href="#">
+			<span></span>
+		</a>
+	</div>
+
+  <div class="responsive-menu" id="responsive-menu">
+		<ul id="nav-list-r">
+      <li><a class="navigation" href="http://hacklondon.org/welcome">Welcome Pack</a></li>
+      <li><a class="linknostyle_first">Schedule</a></li>
+			<li><a class="navigation" href="http://hacklondon.org/live">Live Feed</a></li>
+			<li><a class="navigation" href="http://hacklondon.org/travel.html">Travel Reimbursement</a></li>
+			<li><a class="navigation" href="https://hardware.mlh.io">Hardware Lab</a></li>
+		</ul>
+	</div>
+
+  <br />
+
+  <ul id="header">
+    <li id="li-upcmsessions">
+      <a class="header-a">#HackCortona Schedule</a>
+    </li>
+
+    <li style="float: right">
+      <a class="header-a" id="currentTime">time</a>
+    </li>
+  </ul>
+
+  <div id="liveblog-list">
+    <ul class="list" style="list-style-type: none"></ul>
+  </div>
+
+  <div style="display:none; background-color: red">
+    <li id="liveblog-item">
+      <p class="title"></p>
+      <p class="time"></p>
+      <!-- <p class="location"></p> -->
+    </li>
+  </div>
+
+  <div>
+    <p class="footer-text">Copyright &copy; 2016 KCL Tech Society. All rights reserved.</p>
+  </div>
+
+  <div class="marquee">
+    <p id="marqueetext">
+      Loading content...
+    </p>
+  </div>
+
+  <div class="layer">
+  </div>
+
+
+  <script type="text/javascript">
+    function updateClock() {
+      var today = new Date();
+      var ampm = "AM";
+      if (today.getHours() >= 12) {
+        ampm = "PM";
+      }
+      var minute = "0";
+      if (today.getMinutes() < 10) {
+        minute = "0" + today.getMinutes();
+      } else {
+        minute = today.getMinutes();
+      }
+      var time = today.getHours() + ":" + minute + " " + ampm;
+      document.getElementById('currentTime').innerHTML = time;
+      setTimeout(updateClock, 1000);
+    }
+
+    updateClock();
+  </script>
+
+  <script src="../assets/js_cj/hc-ck.js"></script>
+
+
+  <script type="text/javascript">
+		document.querySelector("#nav-toggle").addEventListener("click", function() {
+			this.classList.toggle("active");
+		});
+
+		jQuery(function($) {
+			$('#nav-toggle').click(function() {
+				if ($('#responsive-menu').hasClass('opened')) {
+					$('#responsive-menu').removeClass('opened');
+					$('#responsive-menu').animate({
+						opacity: '0'
+					}, 300);
+					$('#responsive-menu').css('pointer-events', 'none');
+					// $('.responsive-menu').toggleClass('expand');
+				} else {
+					// $('.responsive-menu').toggleClass('expand');
+					$('#responsive-menu').animate({
+						opacity: '1'
+					}, 300);
+					$('#responsive-menu').css('pointer-events', 'auto');
+					$('#responsive-menu').addClass('opened');
+				}
+			});
+
+
+		})
+  </script>
+</body>
+
+</html>
