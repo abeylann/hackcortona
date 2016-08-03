@@ -148,9 +148,13 @@ function performQuery(
 
 function timestampToReadableFormat(time) {
 
+    var d = new Date(time);
+    var userOffset = d.getTimezoneOffset()*60000; // [min*60000 = ms]
+    var utcTime = new Date(d.getTime() + userOffset);
+
     // Create a new JavaScript Date object based on the timestamp
     // multiplied by 1000 so that the argument is in milliseconds, not seconds.
-    var date = new Date(time);
+    var date = new Date(utcTime);
     // Hours part from the timestamp
     var hours = "0" + date.getHours();
     // Minutes part from the timestamp
