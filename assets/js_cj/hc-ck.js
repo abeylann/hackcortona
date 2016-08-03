@@ -148,22 +148,22 @@ function performQuery(
 
 function timestampToReadableFormat(time) {
 
-    var d = new Date(time);
-    var userOffset = d.getTimezoneOffset()*60000; // [min*60000 = ms]
-    var utcTime = new Date(d.getTime() + userOffset);
-
-    // Create a new JavaScript Date object based on the timestamp
-    // multiplied by 1000 so that the argument is in milliseconds, not seconds.
-    var date = new Date(utcTime);
-    // Hours part from the timestamp
-    var hours = "0" + date.getHours();
-    // Minutes part from the timestamp
-    var minutes = "0" + date.getMinutes();
-
-    // Will display time in 10:30 format
-    var formattedTime = hours.substr(-2) + ':' + minutes.substr(-2);
-
-    return formattedTime;
+    var defaultTime = moment(time).tz("Europe/Rome");
+    return moment(defaultTime).format("HH:mm");
+    // // Create a new JavaScript Date object based on the timestamp
+    // // multiplied by 1000 so that the argument is in milliseconds, not seconds.
+    // var date = new Date(defaultTime);
+    // console.log(date);
+    // console.log(date.getTimezoneOffset());
+    // // Hours part from the timestamp
+    // var hours = "0" + date.getHours();
+    // // Minutes part from the timestamp
+    // var minutes = "0" + date.getMinutes();
+    //
+    // // Will display time in 10:30 format
+    // var formattedTime = hours.substr(-2) + ':' + minutes.substr(-2);
+    //
+    // return formattedTime;
 
 }
 

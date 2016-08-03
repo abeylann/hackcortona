@@ -96,6 +96,9 @@ body {
 .greenIndicator {
   border-left: 8px solid #abbe22 !important;
 }
+.redIndicator {
+  border-left: 8px solid #FF2921 !important;
+}
 
 
 .title {
@@ -167,6 +170,14 @@ body {
 
   p.time {
     font-size: 1.1em;
+  }
+
+  #header {
+    text-align: center;
+  }
+
+  #currentTime {
+    display: none;
   }
 
   body {
