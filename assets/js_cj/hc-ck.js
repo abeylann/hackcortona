@@ -90,6 +90,25 @@ function performQuery(
 
                         var currentRecord = records[i].fields;
 
+                        var startTimeNS = currentRecord['StartTime'].value;
+                        var now = new Date();
+
+                        var endTimeNS = currentRecord['EndTime'];
+                        if (endTimeNS != undefined) {
+                          endTimeNS = endTimeNS.value;
+                        }
+
+                        var nowOverStartTime = (now >= startTimeNS);
+                        var nowBeforeEndTime = (now < endTimeNS);
+                        var first = (nowOverStartTime && nowBeforeEndTime);
+
+                        var second = (now < endTimeNS);
+
+                        if ((first || second) === false) {continue;}
+
+                        // console.log(startTimeNS);
+                        // console.log(now);
+                        // console.log(now >= startTimeNS);
                         // Time
                         // Start Time
 
