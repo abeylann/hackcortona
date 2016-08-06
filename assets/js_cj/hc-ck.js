@@ -92,6 +92,19 @@ function performQuery(
 
                         // Time
                         // Start Time
+
+                        // Title
+                        var title = currentRecord['Title'].value;
+                        titleArray.push(title);
+
+
+                        // locationArray
+                        var location = currentRecord['Location'];
+                        if (location != undefined) {
+                            location = currentRecord['Location'].value;
+                        }
+                        locationArray.push(location === undefined ? '' : location);
+
                         var startTime = timestampToReadableFormat(currentRecord['StartTime'].value);
                         dateArray.push(startTime);
                         nsdateArray.push(new Date(currentRecord['StartTime'].value));
@@ -105,27 +118,14 @@ function performQuery(
 
                         var now = new Date();
 
-                        if ((now >= nsdateArray[i] && now < (endTime === undefined ? now : endTime)) || now <= nsdateArray[i]) {
-                            skipping = false;
-                        } else {
-                            if (skipping == true) {
-                                console.log("continue...");
-                                continue;
-                            }
-                        }
-
-
-                        // Title
-                        var title = currentRecord['Title'].value;
-                        titleArray.push(title);
-
-
-                        // locationArray
-                        var location = currentRecord['Location'];
-                        if (location != undefined) {
-                            location = currentRecord['Location'].value;
-                        }
-                        locationArray.push(location === undefined ? '' : location);
+                        // if ((now >= nsdateArray[i] && now < (endTime === undefined ? now : endTime)) || now <= nsdateArray[i]) {
+                        //     skipping = false;
+                        // } else {
+                        //     if (skipping == true) {
+                        //         console.log("continue...");
+                        //         continue;
+                        //     }
+                        // }
 
                     }
 
@@ -168,7 +168,6 @@ function timestampToReadableFormat(time) {
 }
 
 performQuery('PUBLIC', '_defaultZone', '', 'Schedule', ['Title', 'Location', 'StartTime', 'EndTime'], 'StartTime', true, '', '', []);
-
 
 function performAnnouncementQuery() {
 
